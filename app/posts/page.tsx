@@ -1,7 +1,6 @@
 import { getAllPosts } from '@/lib/posts'
 import { PostCard } from '@/components/PostCard'
 import { getAllCategories } from '@/lib/posts'
-import './globals.css'
 
 export default function PostsPage() {
   const posts = getAllPosts()

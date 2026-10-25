@@ -1,8 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-export const revalidate = 3600;
-
 export default async function sitemap() {
   const dir = path.join(process.cwd(), 'content', 'posts');
   let posts: { url: string; lastModified: string }[] = [];

@@ -3,7 +3,7 @@ import path from 'path';
 
 export default async function sitemap() {
   const dir = path.join(process.cwd(), 'content', 'posts');
-  let posts: { url: string; lastModified: string }[] = [];
+  let posts: { url: string; lastModified: Date }[] = [];
   try {
     const files = await fs.readdir(dir);
     posts = files.filter(f => f.endsWith('.md')).map(f => {
